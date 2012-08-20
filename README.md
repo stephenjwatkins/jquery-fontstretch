@@ -1,6 +1,6 @@
 # FontStretch - jQuery Plugin
 
-FontStretch adjusts the size of text to precisely fit within its container.
+FontStretch adjusts the size of text to fit within its containing element.
 
 ## Usage
 
