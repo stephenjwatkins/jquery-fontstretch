@@ -36,12 +36,12 @@ JS:
         <tr>
             <td>width</td>
             <td>null</td>
-            <td>Fit the text element within the specified size. <em>Optional.</em></td>
+            <td><em>Optional.</em> Fit the text element within the specified size.</td>
         </tr>
         <tr>
             <td>sizeLimit</td>
             <td>999</td>
-            <td>Limits the maximum font size to the specified value. <em>Optional.</em></td>
+            <td><em>Optional.</em> Limits the maximum font size to the specified value.</td>
         </tr>
     </tbody>
 </table>
