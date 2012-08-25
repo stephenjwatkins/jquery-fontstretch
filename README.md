@@ -36,7 +36,7 @@ JS:
         <tr>
             <td>width</td>
             <td>null</td>
-            <td><em>Optional.</em> Fit the text element within the specified size.</td>
+            <td><em>Optional.</em> Fit the text element within the specified size in pixels. Otherwise, grab the width of the element.</td>
         </tr>
         <tr>
             <td>sizeLimit</td>
