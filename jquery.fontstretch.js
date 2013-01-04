@@ -7,13 +7,15 @@
     var methods = {
         init : function( options ) {
 			var settings = $.extend({
+				'sizeOffset': 1,
 				'sizeLimit' : 999,
+				'sizeIncrement': 1,
 				'width': null
 			}, options);
 			
 			return this.each(function() {
 				var $this = $(this);
-				var size = 1;
+				var size = settings.sizeOffset;
 				var width = (settings.width === null) ? $this.width() : settings.width ;
 				var _resizer = $('<span />')
 								.css({
@@ -30,15 +32,28 @@
 								.html($this.html())
 								.appendTo(document.body);
 				var resizerWidth = _resizer.width();
+				
 				while (resizerWidth < width) {
-					if (size === settings.sizeLimit) {
+					if (size >= settings.sizeLimit) {
+						size = settings.sizeLimit;
 						break;
 					}
-					++size;
+					size = size + settings.sizeIncrement;
 					_resizer.css("font-size", size + 'px');
 					resizerWidth = _resizer.width();
 				}
-				$this.css("font-size", (size - 1) + 'px');
+
+				if(settings.sizeIncrement > 1) {
+					while(resizerWidth > width) {
+						size--;
+						_resizer.css("font-size", size + 'px');
+						resizerWidth = _resizer.width();
+					}
+					$this.css("font-size", (size + 1) + 'px');
+				} else {
+					$this.css("font-size", (size - 1) + 'px');
+				}
+				
 				_resizer.remove();
 			});
 		}
