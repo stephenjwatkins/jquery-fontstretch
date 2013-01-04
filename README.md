@@ -43,5 +43,15 @@ JS:
             <td>999</td>
             <td><em>Optional.</em> Limits the maximum font size to the specified value.</td>
         </tr>
+        <tr>
+            <td>sizeOffset</td>
+            <td>1</td>
+            <td><em>Optional.</em> Start calculating font sizes from the specified value.</td>
+        </tr>
+        <tr>
+            <td>sizeIncrement</td>
+            <td>1</td>
+            <td><em>Optional.</em> Increment with the specified value while calculating the font size, useful for bigger fonts to reduce the number of loops.</td>
+        </tr>
     </tbody>
 </table>
