@@ -7,13 +7,14 @@
     var methods = {
         init : function( options ) {
 			var settings = $.extend({
+				'sizeOffset': 1,
 				'sizeLimit' : 999,
 				'width': null
 			}, options);
 			
 			return this.each(function() {
 				var $this = $(this);
-				var size = 1;
+				var size = settings.sizeOffset;
 				var width = (settings.width === null) ? $this.width() : settings.width ;
 				var _resizer = $('<span />')
 								.css({
